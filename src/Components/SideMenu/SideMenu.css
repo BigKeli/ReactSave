@@ -1,0 +1,80 @@
+/* Side Navigation */
+.sidenav {
+    height: 100%; /* Full-height */
+    width: 0; /* Initially 0 width */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black background */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Smooth transition */
+    padding-top: 60px; /* Padding top */
+}
+
+/* Side menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #d5d0ce;
+    
+    display: block;
+    transition: 0.3s;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+    color: #1eff8e;
+}   
+
+/* The close button (x) */
+.sidenav .closebtn {
+    position: fixed; /* Stay in place */
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 20px;
+}
+
+/* Main content */
+#main {
+    transition: margin-left 0.5s; /* Smooth transition */
+    padding: 13px;
+}
+
+/* Open/Close button */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 10px;
+    border-radius: 5px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+}
+
+/* Adjust the content margin when the menu is open */
+.sidenav-open {
+    width: 230px; /* Width of the sidenav when open */
+}
+
+/* Adjust the main content when the menu is open */
+#main.sidenav-open {
+    margin-left: 220px; /* Pushes the main content right when sidenav is open */
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

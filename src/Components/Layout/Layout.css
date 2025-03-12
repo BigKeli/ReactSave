@@ -1,0 +1,30 @@
+.layout-debug-container {
+    position: absolute;       /* Ensure children can position absolutely */
+    width: 98vw;              /* 75% of the viewport width */
+    height: 120vh;            /* Full viewport height */
+    overflow: hidden;         /* Prevent the page from scrolling outside */
+    z-index: 0;               /* Suitable layer */
+    margin-left: 25px;       /* Add 325px space on the left */
+    margin-right: 25px;       /* Add 325px space on the left */
+
+    top: 0;       
+    margin-top: 150px;         /* Pushes the whole container 50px down */
+    display: grid;            /* Use grid layout to arrange debug boxes */
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    grid-gap: 20px;           /* Space between boxes */
+    padding: 10px;            /* Padding inside the container */
+  }
+  
+  .debug-box {
+    width: 630px; /* Twice wider */
+  height: 300px; /* Slightly longer */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto; /* Centers the container horizontally within its column */
+  position: relative; /* Changed to relative for grid layout compatibility */
+    z-index: 2;               /* Higher than backgrounds or side nav */
+    padding: 30px;
+    overflow: hidden;         /* Ensure content doesn’t overflow */
+  }
+  
